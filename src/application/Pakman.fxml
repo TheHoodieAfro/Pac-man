@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pain" maxHeight="600.0" maxWidth="900.0" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PakmanController">
+   <children>
+      <MenuBar layoutY="-1.0" prefHeight="28.0" prefWidth="893.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+                  <MenuItem fx:id="MenuCargar" mnemonicParsing="false" onAction="#cargarJuego" text="Cargar juego" />
+                  <MenuItem fx:id="MenuGuardar" mnemonicParsing="false" onAction="#guardarJuego" text="Guardar juego" />
+                  <MenuItem fx:id="MenuNuevo" mnemonicParsing="false" onAction="#nuevoJuego" text="Nuevo juego" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="MenuSalir" mnemonicParsing="false" onAction="#salir" text="Salir" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ver">
+            <items>
+              <MenuItem fx:id="MenuPuntajes" mnemonicParsing="false" onAction="#displayHall" text="Mejores puntajes" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="MenuInfo" mnemonicParsing="false" onAction="#displayInfo" text="Acerca del juego" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="lblPuntaje" layoutX="14.0" layoutY="538.0" prefHeight="31.0" prefWidth="191.0" text="Puntaje: ">
+         <font>
+            <Font name="Centaur" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
